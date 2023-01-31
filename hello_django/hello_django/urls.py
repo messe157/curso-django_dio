@@ -18,5 +18,7 @@ from django.urls import path
 from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello),
+    path('hello/<soma>/<int:num1>/<int:num2>', views.hello),
+    path('sub_hello/<soma>/<int:num1>/<int:num2>', views.sub_hello),
+    path('mult_hello/<soma>/<int:num1>/<int:num2>', views.mult_hello),
 ]
